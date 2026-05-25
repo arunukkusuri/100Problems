@@ -67,7 +67,7 @@ public static void ArmstrongNumber(){
         System.out.println("Armstrong Number");
     }
     else{
-        System.err.println("Not Armstrong Number");
+        System.out.println("Not Armstrong Number");
     }
 }
 
