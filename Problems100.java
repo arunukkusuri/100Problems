@@ -80,7 +80,7 @@ public static void PrimeNumberCheck() {
             count++;
         }
     }
-    if(count==2){
+    if(count==2){ 
         System.err.println("prime number");
     }
     else{
