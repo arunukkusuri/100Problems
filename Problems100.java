@@ -8,8 +8,13 @@ class Problems100{
      * Main method
      */
     public static void main(String[] args) {
-       reverseNumber();
+    reverseNumber();
     palindrome();
+    ArmstrongNumber();
+
+
+
+
     }
     public static void reverseNumber() {
         Scanner sc=new Scanner(System.in); // 
@@ -44,6 +49,27 @@ public static void palindrome(){
         System.out.println("not palindrome");
     }
 }
+
+
+
+public static void ArmstrongNumber(){
+    Scanner sc=new Scanner(System.in);
+    int num=sc.nextInt();
+    int org=num;
+    int sum=0;
+    while(num>0){
+        int digit=num%10;
+        sum=sum+(digit*digit*digit);
+        num/=10;
+    }
+    if(org==sum){
+        System.out.println("Armstrong Number");
+    }
+    else{
+        System.err.println("Not Armstrong Number");
+    }
+}
+
 
 
 
