@@ -8,9 +8,10 @@ class Problems100{
      * Main method
      */
     public static void main(String[] args) {
-    reverseNumber();
-    palindrome();
-    ArmstrongNumber();
+    // reverseNumber();
+    // palindrome();
+    // ArmstrongNumber();
+    PrimeNumberCheck();
 
 
 
@@ -66,11 +67,26 @@ public static void ArmstrongNumber(){
         System.out.println("Armstrong Number");
     }
     else{
-        System.err.println("Not Armstrong Number");
+        System.out.println("Not Armstrong Number");
     }
 }
 
-
+public static void PrimeNumberCheck() {
+    Scanner sc = new Scanner(System.in);
+    int num=sc.nextInt();
+    int count=0;
+    for(int i=1;i<=num;i++){
+        if(num%i==0){
+            count++;
+        }
+    }
+    if(count==2){
+        System.err.println("prime number");
+    }
+    else{
+        System.err.println("not prime number");
+    }
+}
 
 
 }
