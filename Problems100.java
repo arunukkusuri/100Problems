@@ -11,8 +11,8 @@ class Problems100{
     // reverseNumber();
     // palindrome();
     // ArmstrongNumber();
-    PrimeNumberCheck();
-
+    // PrimeNumberCheck();
+    FactorialNumber();
 
 
 
@@ -81,11 +81,22 @@ public static void PrimeNumberCheck() {
         }
     }
     if(count==2){
-        System.err.println("prime number");
+        System.out.println("prime number");
     }
     else{
-        System.err.println("not prime number");
+        System.out.println("not prime number");
     }
+}
+
+
+public static void FactorialNumber() {
+    Scanner sc=new Scanner(System.in);
+    int num = sc.nextInt();
+    int fact=1;
+    for(int i=1;i<=num;i++){
+        fact=fact*i;
+    }
+    System.out.println(fact);
 }
 
 
