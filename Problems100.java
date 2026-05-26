@@ -16,7 +16,8 @@ class Problems100{
     // FibonacciNumber();
     //  StrongNumber();
     // PerfectNumber();
-    NeonNumber();
+    // NeonNumber();
+    AutomorphicNumber();
 
 
 
@@ -178,6 +179,18 @@ else{
 }
 
 
+public static void AutomorphicNumber(){
+    Scanner sc=new Scanner(System.in);
+    int num=sc.nextInt();
+     int temp=num*num;
+     if(temp%10==num||temp%100==num||temp%1000==num){
+        System.out.println("Automorphic");
+     }
+     else{
+        System.out.println("Not Automorphoic");
+     }
+   
+}
 
 
 }
