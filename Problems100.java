@@ -14,7 +14,8 @@ class Problems100{
     // PrimeNumberCheck();
     // FactorialNumber();
     // FibonacciNumber();
-     StrongNumber();
+    //  StrongNumber();
+    PerfectNumber();
 
 
 
@@ -135,6 +136,24 @@ public static void StrongNumber() {
     else{
         System.err.println("Not Strong Number");
     }
+}
+
+
+public static void PerfectNumber(){
+    Scanner sc=new Scanner(System.in);
+    int num=sc.nextInt();
+    int temp=0;
+    for(int i=1;i<num;i++){
+        if(num%i==0){
+            temp=temp+i;
+    }
+        }
+        if(num==temp){
+            System.out.println("perfect Number");
+        }
+        else{
+            System.out.println("Not Perfect Number");
+        }
 }
 
 }
