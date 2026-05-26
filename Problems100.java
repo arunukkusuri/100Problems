@@ -15,7 +15,8 @@ class Problems100{
     // FactorialNumber();
     // FibonacciNumber();
     //  StrongNumber();
-    PerfectNumber();
+    // PerfectNumber();
+    NeonNumber();
 
 
 
@@ -155,5 +156,26 @@ public static void PerfectNumber(){
             System.out.println("Not Perfect Number");
         }
 }
+
+
+public static void NeonNumber(){
+    Scanner sc=new Scanner (System.in);
+    int num=sc.nextInt();
+    int orig=num;
+    int temp=0;
+    num=num*num;
+    while(num>0){
+        int digit=num%10;
+        temp=temp+digit;
+        num/=10;
+    }
+if(orig==temp){
+    System.out.println("Neon number");
+}
+else{
+    System.out.println("not");
+}
+}
+
 
 }
