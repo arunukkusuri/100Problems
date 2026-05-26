@@ -12,7 +12,8 @@ class Problems100{
     // palindrome();
     // ArmstrongNumber();
     // PrimeNumberCheck();
-    FactorialNumber();
+    // FactorialNumber();
+    FibonacciNumber();
 
 
 
@@ -97,6 +98,20 @@ public static void FactorialNumber() {
         fact=fact*i;
     }
     System.out.println(fact);
+}
+
+
+public static void FibonacciNumber(){
+    Scanner sc=new Scanner (System.in);
+    int num=sc.nextInt();
+    int a=0;
+    int b=1;
+    for(int i=1;i<=num;i++){
+        int c=a+b;
+        a=b;
+        b=c;
+        System.err.println(c);
+    }
 }
 
 
