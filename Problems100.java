@@ -13,7 +13,8 @@ class Problems100{
     // ArmstrongNumber();
     // PrimeNumberCheck();
     // FactorialNumber();
-    FibonacciNumber();
+    // FibonacciNumber();
+     StrongNumber();
 
 
 
@@ -114,5 +115,26 @@ public static void FibonacciNumber(){
     }
 }
 
+public static void StrongNumber() {
+    Scanner sc=new Scanner(System.in);
+    int num=sc.nextInt();
+    int orig=num;
+    int temp=0;
+    while(num>0){
+        int digit=num%10;
+        int fact=1;
+        for(int i=1;i<=digit;i++){
+            fact=fact*i;
+        }
+        temp=fact+temp;
+        num=num/10;
+    }
+    if(orig==temp){
+        System.err.println("Strog Number");
+    }
+    else{
+        System.err.println("Not Strong Number");
+    }
+}
 
 }
