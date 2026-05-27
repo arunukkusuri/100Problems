@@ -17,8 +17,12 @@ class Problems100{
     //  StrongNumber();
     // PerfectNumber();
     // NeonNumber();
-    AutomorphicNumber();
-
+    // AutomorphicNumber();
+    // HarshadNumber();
+    // SumOfDigits();
+    // ProductOfDigits();
+    // CountOfDigit();
+    // PowerOfDigit();
 
 
     }
@@ -191,6 +195,103 @@ public static void AutomorphicNumber(){
      }
    
 }
+
+
+public static void HarshadNumber(){
+    Scanner sc=new Scanner(System.in);
+    int num=sc.nextInt();
+    int temp=0;
+    int org=num;
+    while(num>0){
+        int digit=num%10;
+        temp=temp+digit;
+        num/=10;
+    }
+     if(org % temp == 0) {
+            System.out.println("Harshad Number");
+        }
+        else {
+            System.out.println("Not Harshad Number");
+}
+}
+
+
+public static void  SumOfDigits(){
+     Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+
+        int sum = 0;
+
+        while(num > 0) {
+
+            int digit = num % 10;
+
+            sum = sum + digit;
+
+            num = num / 10;
+        }
+    System.out.println(sum);
+}
+
+
+public static void ProductOfDigits(){
+     Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+
+        int product = 1;
+
+        while(num > 0) {
+
+            int digit = num % 10;
+
+            product = product * digit;
+
+            num = num / 10;
+        }
+
+        System.out.println(product);
+}
+
+
+public static void CountOfDigit(){
+    Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+
+        int count = 0;
+
+        while(num > 0) {
+
+            count++;
+
+            num = num / 10;
+        }
+
+        System.out.println(count);
+}
+
+
+public static void PowerOfDigit(){
+    Scanner sc = new Scanner(System.in);
+
+        int base = sc.nextInt();
+
+        int power = sc.nextInt();
+
+        int result = 1;
+
+        for(int i = 1; i <= power; i++) {
+
+            result = result * base;
+        }
+
+        System.out.println(result);
+}
+
+
+
 
 
 }
