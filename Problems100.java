@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Practice 
@@ -49,7 +49,30 @@ class Problems100{
     // mergeTwoArray();
     // rotateArray();
     // leftRotateArray();
-    rightRotateArray();
+    // rightRotateArray();
+    // commonElements();
+    // ZerosToEnd();
+    // maxDifference();
+    // twoSumTarget();
+    // binarySearch();
+    // linearSearch();
+    // reverseString();
+    // reversePalindrome();
+    // vowelsAndConsonants();
+    // spaceBetweenString();
+    // toggleCharacters();
+    // dupilcatesInString();
+    // characterFrequency();
+    // checkAnagram();
+    // removeDuplicateCharacters();
+    // firstNonRepeatingCharacter();
+    // LongestWordInSentence();
+    // reverseWords();
+    // stringComparison();
+    // subString();
+    // ascii();
+    // countSpecialCharacters();
+    removeVowels();
 
     }
     public static void reverseNumber() {
@@ -800,6 +823,511 @@ public static void rightRotateArray(){
     for(int k=0;k<arr.length;k++){
         System.out.print(arr[k]+" ");
     }
+}
+
+
+public static void commonElements(){
+    Scanner sc=new Scanner(System.in);
+    int n1=sc.nextInt();
+    int arr1[]=new int[n1];
+    int n2=sc.nextInt();
+    int arr2[]=new int[n2];
+    for(int i=0;i<arr1.length;i++){
+        arr1[i]=sc.nextInt();
+    }
+    for(int j=0;j<arr2.length;j++){
+        arr2[j]=sc.nextInt();
+    }
+    for(int i=0;i<arr1.length;i++){
+        for(int k=0;k<arr2.length;k++){
+            if(arr1[i]==arr2[k]){
+                System.out.println(arr1[i]);
+            }
+        }
+    }
+}
+
+
+public static void ZerosToEnd(){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int arr[]=new int[n];
+    for(int j=0;j<arr.length;j++){
+        arr[j]=sc.nextInt();
+    }
+    int j=0;
+    for(int i=0;i<arr.length;i++){
+        if(arr[i]!=0){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            j++;
+        }
+    }
+    for(int i=0;i<arr.length;i++){
+        System.out.print(arr[i]+" ");
+    }
+}
+
+
+public static void maxDifference(){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int arr[]=new int[n];
+    for(int i=0;i<arr.length;i++){
+        arr[i]=sc.nextInt();
+    }
+    int maxdiff=arr[1]-arr[0];
+    for(int i=0;i<arr.length;i++){
+        for(int j=i+1;j<arr.length;j++){
+            int diff=arr[j]-arr[i];
+            if(diff>maxdiff){
+                maxdiff=diff;
+            }
+        }
+    }
+    System.out.print(maxdiff+" ");
+}
+
+
+public static void  twoSumTarget(){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int arr[]=new int[n];
+    for(int i=0;i<arr.length;i++){
+        arr[i]=sc.nextInt();
+    }
+    int target=sc.nextInt();
+    for(int i=0;i<arr.length;i++){
+        for(int j=i+1;j<arr.length;j++){
+            if(arr[i]+arr[j]==target){
+                System.out.println(arr[i]+arr[j]);
+                return;
+            }
+        }
+    }
+    System.out.println("Target not found");
+}
+
+
+public static void binarySearch() {
+
+    Scanner sc = new Scanner(System.in);
+
+    int n = sc.nextInt();
+    int arr[] = new int[n];
+
+    for(int i = 0; i < n; i++) {
+        arr[i] = sc.nextInt();
+    }
+
+    int target = sc.nextInt();
+
+    int low = 0;
+    int high = n - 1;
+
+    while(low <= high) {
+
+        int mid = (low + high) / 2;
+
+        if(arr[mid] == target) {
+            System.out.println("Target Found at index " + mid);
+            return;
+        }
+
+        if(target > arr[mid]) {
+            low = mid + 1;
+        }
+        else {
+            high = mid - 1;
+        }
+    }
+
+    System.out.println("Target Not Found");
+
+}
+
+
+public static void linearSearch() {
+
+    Scanner sc = new Scanner(System.in);
+
+    int n = sc.nextInt();
+    int arr[] = new int[n];
+
+    for(int i = 0; i < n; i++) {
+        arr[i] = sc.nextInt();
+    }
+
+    int target = sc.nextInt();
+
+    for(int i = 0; i < n; i++) {
+
+        if(arr[i] == target) {
+            System.out.println("Target Found at index " + i);
+            return;
+        }
+    }
+
+    System.out.println("Target Not Found");
+}
+
+
+public static void checkSorted() {
+
+    Scanner sc = new Scanner(System.in);
+
+    int n = sc.nextInt();
+    int arr[] = new int[n];
+
+    for(int i = 0; i < n; i++) {
+        arr[i] = sc.nextInt();
+    }
+
+    for(int i = 0; i < n - 1; i++) {
+
+        if(arr[i] > arr[i + 1]) {
+            System.out.println("Not Sorted");
+            return;
+        }
+    }
+
+    System.out.println("Sorted");
+}
+
+
+public static void reverseString(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    for(int i=str.length()-1;i>=0;i--){
+        System.out.print(str.charAt(i));
+    }
+}
+
+
+public static void reversePalindrome(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    String rev="";
+    for(int i=str.length()-1;i>=0;i--){
+        rev=rev+str.charAt(i);
+    }
+    if(str.equals(rev)){
+        System.out.print("palindrome");
+    }else{
+        System.out.println("not a palindrome");
+    }
+}
+
+
+public static void vowelsAndConsonants(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    int vowels=0;
+    int consonants=0;
+    for(int i=0;i<str.length();i++){
+        char ch=Character.toLowerCase(str.charAt(i));
+        if(ch>='a'&&ch<='z'){
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+                vowels++;
+            }
+            else{
+                consonants++;
+            }
+        }
+    }
+    System.out.println("vowles is :"+vowels);
+    System.out.println("consonants is :"+consonants);
+} 
+
+
+public static void spaceBetweenString(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    String space="";
+    for(int i=0;i<str.length();i++){
+        if(str.charAt(i)!=' '){
+            space =space+str.charAt(i);
+        }
+    }
+    System.out.println(space);
+}
+
+
+public static void toggleCharacters(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    String result="";
+    for(int i=0;i<str.length();i++){
+        char ch=str.charAt(i);
+        if(Character.isUpperCase(ch)){
+            result=result+Character.toLowerCase(ch);
+        }
+        else if(Character.isLowerCase(ch)){
+            result=result+Character.toUpperCase(ch);
+        }
+        else{
+            result=result+ch;
+        }
+    }
+    System.out.println(result);
+}
+
+
+public static void dupilcatesInString(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    for(int i=0;i<str.length();i++){
+        int count=1;
+        for(int j=i+1;j<str.length();j++){
+        if(str.charAt(i)==str.charAt(j)){
+           count++;
+    }
+    
+        }
+        if(count>1){
+        System.out.print(str.charAt(i));
+    }
+    }
+    
+}
+
+
+public static void characterFrequency() {
+
+    Scanner sc = new Scanner(System.in);
+    String str = sc.nextLine();
+
+    for(int i = 0; i < str.length(); i++) {
+
+        boolean alreadyCounted = false;
+
+        for(int k = 0; k < i; k++) {
+            if(str.charAt(i) == str.charAt(k)) {
+                alreadyCounted = true;
+                break;
+            }
+        }
+
+        if(alreadyCounted) {
+            continue;
+        }
+
+        int count = 1;
+
+        for(int j = i + 1; j < str.length(); j++) {
+            if(str.charAt(i) == str.charAt(j)) {
+                count++;
+            }
+        }
+
+        System.out.println(str.charAt(i) + " = " + count);
+    }
+}
+
+
+public static void checkAnagram() {
+
+    Scanner sc = new Scanner(System.in);
+
+    String str1 = sc.nextLine();
+    String str2 = sc.nextLine();
+
+    if(str1.length() != str2.length()) {
+        System.out.println("Not Anagram");
+        return;
+    }
+
+    char arr1[] = str1.toCharArray();
+    char arr2[] = str2.toCharArray();
+
+    Arrays.sort(arr1);
+    Arrays.sort(arr2);
+
+    if(Arrays.equals(arr1, arr2)) {
+        System.out.println("Anagram");
+    } else {
+        System.out.println("Not Anagram");
+    }
+}
+
+
+public static void removeDuplicateCharacters() {
+
+    Scanner sc = new Scanner(System.in);
+
+    String str = sc.nextLine();
+
+    String result = "";
+
+    for(int i = 0; i < str.length(); i++) {
+
+        boolean duplicate = false;
+
+        for(int j = 0; j < result.length(); j++) {
+
+            if(str.charAt(i) == result.charAt(j)) {
+                duplicate = true;
+                break;
+            }
+        }
+
+        if(!duplicate) {
+            result = result + str.charAt(i);
+        }
+    }
+
+    System.out.println(result);
+}
+
+
+public static void firstNonRepeatingCharacter(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    for(int i=0;i<str.length();i++){
+        char ch1=Character.toLowerCase(str.charAt(i));
+        int count=0;
+        for(int j=0;j<str.length();j++){
+            char ch2=Character.toLowerCase(str.charAt(j));
+            if(ch1==ch2){
+                count++;
+            }
+        }
+        if(count==1){
+            System.out.print(str.charAt(i));
+            return;
+        }
+    }
+    System.out.println("no non-repeating characters");
+}
+
+
+public static void LongestWordInSentence(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    String words[]=str.split(" ");
+    String longest="";
+    for(int i=0;i<words.length;i++){
+        if(words[i].length()>longest.length()){
+            longest=words[i];
+        }
+      
+    }
+      System.out.println(longest);
+}
+
+
+public static void wordsInASentence(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine().trim();
+    if(str.length()==0){
+        System.out.println(0);
+        return;
+    }
+    int count=1;
+    for(int i=0;i<str.length();i++){
+        if(str.charAt(i)==' '){
+            count++;
+        }
+    }
+    System.out.print(count);
+}
+
+
+public static void reverseWords(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    String words[]=str.split(" ");
+    for(int i=words.length-1;i>=0;i--){
+        System.out.print(words[i]+" ");
+    }
+}
+
+
+public static void stringComparison(){
+    Scanner sc=new Scanner(System.in);
+    String str1=sc.nextLine();
+    String str2=sc.nextLine();
+    if(str1.equals(str2)){
+        System.out.print("Same String");
+    }
+    else{
+        System.out.println("not same");
+    }
+
+}
+
+
+public static void subString(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    String sub=sc.nextLine();
+    if(str.contains(sub)){
+        System.out.println("Sub String founded");
+    }
+    else{
+        System.out.println("Sub String not founded");
+    }
+}
+
+
+public static void lexicalLargest(){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    sc.nextLine();
+    String largest=sc.nextLine();
+    for(int i=0;i<n;i++){
+        String str=sc.nextLine();
+        if(str.compareTo(largest) > 0) {
+            largest = str;
+        }
+    }
+    System.out.println(largest);
+}
+
+
+public static void ascii(){
+    Scanner sc=new Scanner(System.in);
+    char ch=sc.next().charAt(0);
+    System.out.println((int)ch);
+}
+
+
+public static void countSpecialCharacters() {
+
+    Scanner sc = new Scanner(System.in);
+    String str = sc.nextLine();
+
+    int count = 0;
+
+    for(int i = 0; i < str.length(); i++) {
+
+        char ch = str.charAt(i);
+
+        if(!((ch >= 'a' && ch <= 'z') ||
+             (ch >= 'A' && ch <= 'Z') ||
+             (ch >= '0' && ch <= '9') ||
+             (ch == ' '))) {
+
+            count++;
+        }
+    }
+
+    System.out.println(count);
+}
+
+
+public static void removeVowels(){
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    String result="";
+    for(int i=0;i<str.length();i++){
+        char ch=Character.toLowerCase(str.charAt(i));
+        if(ch !='a' && ch !='e' && ch!='i' && ch!='o' && ch!='u'){
+            result=result+str.charAt(i);
+        }
+    }
+    System.out.println(result);
 }
 
 
