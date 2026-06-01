@@ -23,6 +23,7 @@ class Problems100{
     // ProductOfDigits();
     // CountOfDigit();
     // PowerOfDigit();
+<<<<<<< Updated upstream
     // HcfNumber();
     // LcmofNumbers();
     // SwaptwoNumbers();
@@ -73,6 +74,9 @@ class Problems100{
     // ascii();
     // countSpecialCharacters();
     removeVowels();
+=======
+
+>>>>>>> Stashed changes
 
     }
     public static void reverseNumber() {
@@ -342,6 +346,7 @@ public static void PowerOfDigit(){
 }
 
 
+<<<<<<< Updated upstream
 public static void HcfNumber(){
 
     Scanner sc=new Scanner (System.in);
@@ -1334,3 +1339,9 @@ public static void removeVowels(){
 }
 
 
+=======
+
+
+
+}
+>>>>>>> Stashed changes
