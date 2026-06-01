@@ -17,8 +17,12 @@ class Problems100{
     //  StrongNumber();
     // PerfectNumber();
     // NeonNumber();
-    AutomorphicNumber();
-
+    // AutomorphicNumber();
+    // HarshadNumber();
+    // SumOfDigits();
+    // ProductOfDigits();
+    // CountOfDigit();
+    // PowerOfDigit();
 
 
     }
@@ -193,7 +197,6 @@ public static void AutomorphicNumber(){
      }
    
 }
-
 
 
 public static void HarshadNumber(){
