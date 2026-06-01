@@ -17,66 +17,9 @@ class Problems100{
     //  StrongNumber();
     // PerfectNumber();
     // NeonNumber();
-    // AutomorphicNumber();
-    // HarshadNumber();
-    // SumOfDigits();
-    // ProductOfDigits();
-    // CountOfDigit();
-    // PowerOfDigit();
-<<<<<<< Updated upstream
-    // HcfNumber();
-    // LcmofNumbers();
-    // SwaptwoNumbers();
-    // decimaltoBinary();
-    // binarytoDecimal();
-    // asciiNumber();
-    // evenOrOdd();
-    // leapYear();
-    // nFibonnaci();
-    // tralingZeroes();
-    // highestElementArray();
-    // smallestElement();
-    // secondLargest();
-    // secondSmallest();
-    // reverseArray();
-    // asscendingOrderSorting();
-    // // decendingOrderSorting();
-    // sumOfArrayElements();
-    // averageElementsOfArray();
-    // duplicateElementFinding();
-    // removeDuplicates();
-    // frequencyOfElement();
-    // missingNumberInArray();
-    // mergeTwoArray();
-    // rotateArray();
-    // leftRotateArray();
-    // rightRotateArray();
-    // commonElements();
-    // ZerosToEnd();
-    // maxDifference();
-    // twoSumTarget();
-    // binarySearch();
-    // linearSearch();
-    // reverseString();
-    // reversePalindrome();
-    // vowelsAndConsonants();
-    // spaceBetweenString();
-    // toggleCharacters();
-    // dupilcatesInString();
-    // characterFrequency();
-    // checkAnagram();
-    // removeDuplicateCharacters();
-    // firstNonRepeatingCharacter();
-    // LongestWordInSentence();
-    // reverseWords();
-    // stringComparison();
-    // subString();
-    // ascii();
-    // countSpecialCharacters();
-    removeVowels();
-=======
+    AutomorphicNumber();
 
->>>>>>> Stashed changes
+
 
     }
     public static void reverseNumber() {
@@ -252,6 +195,7 @@ public static void AutomorphicNumber(){
 }
 
 
+
 public static void HarshadNumber(){
     Scanner sc=new Scanner(System.in);
     int num=sc.nextInt();
@@ -346,7 +290,6 @@ public static void PowerOfDigit(){
 }
 
 
-<<<<<<< Updated upstream
 public static void HcfNumber(){
 
     Scanner sc=new Scanner (System.in);
@@ -1337,11 +1280,3 @@ public static void removeVowels(){
 
 
 }
-
-
-=======
-
-
-
-}
->>>>>>> Stashed changes
