@@ -23,6 +23,12 @@ class Problems100{
     // ProductOfDigits();
     // CountOfDigit();
     // PowerOfDigit();
+    // trianglePattern();
+    // invertedTriangle();
+    // rightAngleTriangle();
+    // dimanodTriangle();
+    // numberPyrimad();
+    // asscendingOrderSorting();
 
 
     }
@@ -38,8 +44,6 @@ class Problems100{
         System.out.println(rev);
         sc.close();
     }
-
-
 
 
 public static void palindrome(){
@@ -59,7 +63,6 @@ public static void palindrome(){
         System.out.println("not palindrome");
     }
 }
-
 
 
 public static void ArmstrongNumber(){
@@ -546,7 +549,7 @@ public static void asscendingOrderSorting(){
         }
     }
     for(int k=0;k<arr.length;k++){
-        System.out.println(arr[k]);
+        System.out.print(arr[k]+" ");
     }
 }
 
@@ -1279,6 +1282,87 @@ public static void removeVowels(){
         }
     }
     System.out.println(result);
+}
+
+
+public static void trianglePattern(){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i;j++){
+            System.out.print(" ");
+        }
+        for(int k=0;k<(2*i-1);k++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
+
+
+public static void invertedTriangle(){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=n;i>0;i--){
+        for(int j=0;j<n-i;j++){
+            System.out.print(" ");
+        }
+        for(int k=0;k<(2*i-1);k++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
+
+
+public static void rightAngleTriangle(){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i;j++){
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
+}
+
+
+public static void dimanodTriangle(){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i;j++){
+            System.out.print(" ");
+        }
+        for(int k=0;k<(2*i-1);k++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+    for(int i=n-1;i>0;i--){
+        for(int j=0;j<n-i;j++){
+            System.out.print(" ");
+        }
+        for(int k=0;k<(2*i-1);k++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
+
+
+public static void numberPyrimad(){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n-i;j++){
+            System.out.print(" ");
+        }
+        for(int k=1;k<=i;k++){
+            System.out.print(k+" ");
+        }
+        System.out.println();
+    }
 }
 
 
